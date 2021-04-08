@@ -287,15 +287,6 @@ window.findAndReplaceDOMText = (function() {
 }());
 (function (window, undefined) {
 
-/*
-  🦟DEBUG
-  ℹ️INFO
-  ⚠️WARNING
-  💩ERROR
-  😡CRITICAL
-  💀FATAL
-*/
-
 var profaneTerms = [
   'debug',
   'DEBUG',
@@ -316,12 +307,8 @@ var profaneTerms = [
   'none',
   'trace',
   'TRACE',
-  'off',
-  'all'
+  'off'
 ];
-
-
-
 
 function revealProfanity(term) {
     var c = term.charAt(0),
@@ -346,10 +333,8 @@ function revealProfanity(term) {
     if (lower_term =='fatal' || lower_term =='FATAL')
         emoji = '💀';
         
-
     var abbr = document.createElement("abbr");
-    // abbr.style.color = 'green';
-    abbr.style.fontSize = '21px';
+    abbr.style.textDecoration = 'none';
     abbr.title = term;
     abbr.innerHTML = emoji; //+ "(" + term+ ")";
 

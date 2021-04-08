@@ -3,7 +3,41 @@
     <title>Loglevel to emoji</title>
 </head>
 <body>
-    <p> INFO this is cool </p>
-    <p> WARN this is a warning </p>
+    <h1>Log Level to Emoji</h1>
+
+    <pre>
+// Active Log Level = DEBUG
+2020-11-11 13:52:12 INFO  app - XYZ Integration API Manager v2.0.0
+2020-11-11 13:52:15 INFO  app - Loading configurations..
+2020-11-11 13:52:18 INFO  app - *** InstanceID APIM_V2_I02
+2020-11-11 13:52:18 INFO  app - *** BaseURL http://10.244.2.168:3000
+2020-11-11 13:52:19 INFO  app - *** LogLevel 05 (DEBUG)
+2020-11-11 13:52:12 DEBUG  App:22 - Initializing Swagger UI..
+2020-11-11 13:52:14 DEBUG  App:28 - Generating schemata..
+2020-11-11 13:52:14 DEBUG  App:30 - Initializing REST services..
+2020-11-11 13:52:15 DEBUG  App:32 - Generating documentation..
+2020-11-11 13:52:18 DEBUG  App:36 - Loading adapters..
+2020-11-11 13:52:21 DEBUG  Adapters:10 - Loading adapter docs/v1 
+2020-11-11 13:52:22 DEBUG  Adapters:16 - Loading adapter mongo/v1 
+2020-11-11 13:52:26 DEBUG  Docs:38 - docs adapter initialized
+2020-11-11 13:52:27 DEBUG  Mongo:38 - mongo adapter initialized
+2020-11-11 13:52:22 DEBUG  Adapters:20 - Successfully loaded all
+2020-11-11 13:52:31 INFO  app - Started listening...
+// Active Log Level = INFO
+2020-11-11 13:52:12 INFO  app - XYZ Integration API Manager v2.0.0
+2020-11-11 13:52:15 INFO  app - Loading configurations..
+2020-11-11 13:52:18 INFO  app - *** InstanceID API_V2_I02
+2020-11-11 13:52:18 INFO  app - *** BaseURL http://10.244.2.168:3000
+2020-11-11 13:52:19 INFO  app - *** LogLevel 04 (INFO)
+2020-11-11 13:53:18 WARN  app - Uh oh! Not good. *** BaseURL http://10.244.2.168:3000
+2020-11-11 13:54:19 ERROR  app - Oops. Should not be happening. *** LogLevel 04 (INFO)
+2020-11-11 13:54:19 CRITICAL  app - But it really is. *** LogLevel 04 (INFO)
+2020-11-11 13:55:31 FATAL  app - And it is gone. Started listening...
+</pre>
 </body>
+    <button onclick="(function(){var d=document,s=d.createElement('script');s.src='http://localhost:9527/emoji_log_level.js';d.body.appendChild(s);}())">Emojify</button>
+    <button onclick="location.reload();">Clear</button>
+    <p>
+        <a target="_blank" href="https://github.com/paulospx/loglevel2emoji">Github Project and Instructions</a>
+    </p>
 </html>
