@@ -34,10 +34,15 @@
 2020-11-11 13:54:19 CRITICAL  app - But it really is. *** LogLevel 04 (INFO)
 2020-11-11 13:55:31 FATAL  app - And it is gone. Stopped listening...
 </pre>
-</body>
-    <button onclick="(function(){var d=document,s=d.createElement('script');s.src='http://localhost:9527/emoji_log_level.js';d.body.appendChild(s);}())">Emojify</button>
+    <button onclick="emojify()">Emojify</button>
     <button onclick="location.reload();">Clear</button>
     <p>
         <a target="_blank" href="https://github.com/paulospx/loglevel2emoji">Github Project and Instructions</a>
     </p>
+	<script>
+		function emojify() {
+			var d=document,s=d.createElement('script');s.src='http://localhost:9527/emoji_log_level.js';d.body.appendChild(s);
+		}
+	</script>
+</body>
 </html>
