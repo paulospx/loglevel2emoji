@@ -323,7 +323,7 @@ function revealProfanity(term) {
     if ( lower_term ==  'debug' || lower_term == 'DEBUG')
       emoji = '🦟';
     if (lower_term == 'info' || lower_term =='INFO' || lower_term =='information' || lower_term =='INFORMATION')
-      emoji = '📣';
+      emoji = 'ℹ️'; // '📣';
     if (lower_term =='warning' || lower_term =='WARNING' || lower_term =='warn' || lower_term =='WARN')
       emoji = '⚠️';
     if (lower_term =='error' || lower_term =='ERROR')
